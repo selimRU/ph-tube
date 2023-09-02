@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- daisyui & tailwind cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- title -->
+    <title>PH Tube Assignment</title>
+
+    <!-- tailwind.config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blogColor: '#FF1F3D',
+                        blogText: '#FFF',
+                        btnColor: '#25252533',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="container mx-auto px-3">
+            <div
+                class="flex flex-col md:flex-row lg:flex-row justify-between gap-3 items-center pt-5 pb-5 md:pt-12 md:pb-10">
+                <div>
+                    <img class="hover:-translate-y-1 hover:scale-110" src="./Logo.png" alt="">
+                </div>
+                <div>
+                    <button onclick="sorting()"
+                        class="bg-btnColor hover:bg-blogColor hover:text-blogText px-8 py-2 rounded-md capitalize">Sort
+                        by
+                        view</button>
+                </div>
+                <div>
+                    <button onclick="blogQuestions()"
+                        class=" px-4 py-2 rounded-md bg-blogColor capitalize text-blogText">Blog</button>
+                </div>
+            </div>
+            <div class="h-[2px] w-full bg-slate-100"></div>
+        </nav>
+    </header>
+    <main class="container mx-auto px-3">
+        <section>
+            <div class="py-10 flex flex-col md:flex-row lg:flex-row justify-center items-center gap-3"
+                id="category-data-container">
+
+            </div>
+        </section>
+        <section>
+            <div id="card-container" class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            </div>
+            <div id="no-data" class="">
+
+            </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
